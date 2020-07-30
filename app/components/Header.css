@@ -1,0 +1,22 @@
+.container {
+  padding: 8px;
+  user-select: none;
+  -webkit-app-region: drag;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #232c3991;
+  backdrop-filter: saturate(180%) blur(5px);
+  z-index: 3;
+}
+
+.close {
+  margin: 0 10px 0 2px;
+  cursor: pointer;
+}
+
+.toSuspension {
+  cursor: pointer;
+}

@@ -1,0 +1,52 @@
+.container {
+  width: 60px;
+  height: 60px;
+  user-select: none;
+  cursor: pointer;
+  background-color: #415368bb;
+  -webkit-app-region: drag;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress {
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.wave {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+  background: #aecbd6cc;
+  overflow: hidden;
+}
+
+.wave:after {
+  content: '';
+  width: 300px;
+  height: 300px;
+  background: #415368bb;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -60%);
+  border-radius: 40%;
+  animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+  100% {
+    transform: translate(-50%, -60%) rotate(360deg);
+  }
+}
